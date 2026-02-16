@@ -3,13 +3,20 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "workspaces": [
+    "pkgs/*"
+  ],
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "dev": "nx run frontend:dev",
+    "server": "nx run backend:dev",
+    "dev:all": "nx run-many -t dev --projects frontend,backend --parallel",
+    "build": "nx run frontend:build",
+    "lint": "nx run-many -t lint --projects frontend,backend",
+    "preview": "nx run frontend:preview"
   },
   "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
@@ -17,11 +24,14 @@
     "@eslint/js": "^9.39.1",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
+    "@typescript-eslint/parser": "^8.55.0",
     "@vitejs/plugin-react": "^5.1.1",
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
+    "nx": "^22.5.1",
+    "typescript": "^5.9.3",
     "vite": "^7.3.1"
   }
 }
