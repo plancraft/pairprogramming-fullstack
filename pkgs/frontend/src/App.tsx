@@ -56,7 +56,7 @@ export class App extends React.Component {
         <div className="main-page">
           <div className="hero">
             <p className="hero-date">Montag, 16.02.2026</p>
-            <h1 className="hero-title">Guten Morgen, Sophie!</h1>
+            <h1 className="hero-title">Guten Morgen, Rafael!</h1>
             <div className="action-suggestions">
               <p className="action-suggestions-label">Vorschlage fur dich:</p>
               <div className="action-button-row">
